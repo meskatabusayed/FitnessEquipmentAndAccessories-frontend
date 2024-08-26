@@ -1,17 +1,11 @@
-
-import './App.css'
+import MainLayout from "./components/layouts/MainLayout";
 
 function App() {
-  
-
   return (
-    <>
-     
-        
-      <h1>fitness</h1>
-      
-    </>
-  )
+    <div className="bg-gray-100">
+      <MainLayout />
+    </div>
+  );
 }
 
-export default App
+export default App;

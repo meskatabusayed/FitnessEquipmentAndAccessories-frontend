@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../../../utils/navLinks";
 
+
 const Header = () => {
   return (
     <div className="navbar bg-white shadow-sm p-6 sticky top-0 z-20">
@@ -42,9 +43,9 @@ const Header = () => {
           </ul>
         </div>
         <div className="flex items-center">
-          <img className="w-16 h-10" src="/public/images/18969559-removebg.png" alt="FitFlex Logo" />
+          
           <a className="ml-2 text-2xl font-bold text-gray-800">
-            FitFlex Essentials
+            PH Fitness
           </a>
         </div>
       </div>
