@@ -2,7 +2,9 @@ import { NavLink } from "react-router-dom";
 import { navLinks } from "../../../utils/navLinks";
 
 
+
 const Header = () => {
+ 
   return (
     //navbar section start
     <div className="navbar bg-white shadow-sm p-6 sticky top-0 z-20">
@@ -33,7 +35,11 @@ const Header = () => {
                 
                   <NavLink
                     to={navlink.path}
-                    className="block px-4 py-2 text-gray-700 hover:text-gray-500 transition duration-300 ease-in-out btn btn-ghost"
+                    className={({ isActive }) =>
+                      isActive
+                        ? 'text-gray-700 hover:text-gray-500 text-lg font-medium transition duration-300 ease-in-out btn btn-ghost  border-b-2 border-black'
+                        : 'text-gray-700 hover:text-gray-500 text-lg font-medium transition duration-300 ease-in-out btn btn-ghost'
+                    }
                   >
                     {navlink.name}
                     <span className="absolute bottom-0 left-0 w-full h-0.5  bg-gray-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></span>
@@ -44,7 +50,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="flex items-center">
-          
+          <img className="w-20 text-white" src="./src/assets/logo.png" alt="logo" />
           <a className="ml-2 text-2xl font-bold text-gray-800">
             PH Fitness
           </a>
@@ -57,12 +63,18 @@ const Header = () => {
               
                 <NavLink
                   to={navlink.path}
-                  className="text-gray-700 hover:text-gray-500 text-lg font-medium transition duration-300 ease-in-out btn btn-ghost"
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'text-gray-700 hover:text-gray-500 text-lg font-medium transition duration-300 ease-in-out btn btn-ghost  border-b-2 border-black'
+                      : 'text-gray-700 hover:text-gray-500 text-lg font-medium transition duration-300 ease-in-out btn btn-ghost'
+                  }
                 >
+
+                
                   {navlink.name}
                   <span className="absolute bottom-0 left-0 w-full h-0.5  bg-gray-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></span>
                 </NavLink>
-             
+             {/*  */}
             </li>
           ))}
         </ul>
