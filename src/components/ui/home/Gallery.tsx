@@ -9,7 +9,7 @@ const Gallery = () => {
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
-                src="/images/happyCustomer11.jpg"
+                src="./src/assets/Gym Equipment.jpg"
                 alt=""
               />
             </div>
