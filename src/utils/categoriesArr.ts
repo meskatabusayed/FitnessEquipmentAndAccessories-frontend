@@ -1,14 +1,14 @@
 export const categoriesArr = [
     {
       name: "Gym Equipment",
-      image: "/images/photo-1620188526357-ff08e03da266.avif",
+      image: "./src/assets/Gym Equipment.jpg",
     },
     {
       name: "Cardio Equipment",
-      image: "/images/photo-1571902943202-507ec2618e8f.avif",
+      image: "./src/assets/Cardio Equipment.jpg",
     },
     {
       name: "Accessories",
-      image: "/images/photo-1694856958682-3d2d251a9dae.avif",
+      image: "./src/assets/Accessories.avif",
     },
   ];
