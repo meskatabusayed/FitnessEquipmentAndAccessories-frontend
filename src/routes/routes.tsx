@@ -1,16 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
+import HomePage from "../pages/HomePage";
 import AboutUsPage from "../pages/AboutUsPage";
-// import HomePage from "../pages/HomePage";
-// import AboutUsPage from "../pages/AboutUsPage";
-// import ProductsPage from "../pages/ProductsPage";
-// import ProductDetailsPage from "../pages/ProductDetailsPage";
-// import CartPage from "../pages/CartPage";
-// import CheckoutPage from "../pages/CheckoutPage";
-// import ProductManagementPage from "../pages/ProductManagementPage";
-// import SuccessPage from "../components/ui/checkout/SuccessPage";
-// import UpdateForm from "../components/ui/productManagement/UpdateForm";
-// import CreateProductForm from "../components/ui/productManagement/CreateProductForm";
+import ProductsPage from "../pages/ProductsPage";
+import ProductDetailsPage from "../pages/ProductDetailsPage";
+import CartPage from "../pages/CartPage";
+import CheckoutPage from "../pages/CheckoutPage";
+import ProductManagementPage from "../pages/ProductManagementPage";
+import SuccessPage from "../components/ui/checkout/SuccessPage";
+import UpdateForm from "../components/ui/productManagement/UpdateForm";
+import CreateProductForm from "../components/ui/productManagement/CreateProductForm";
 
 
 const router = createBrowserRouter([
@@ -20,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        // element: <HomePage></HomePage>,
+        element: <HomePage></HomePage>,
       },
       {
         path: "about",
@@ -34,35 +33,35 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        // element: <ProductsPage></ProductsPage>,
+        element: <ProductsPage></ProductsPage>,
       },
       {
         path: "management",
-        // element: <ProductManagementPage></ProductManagementPage>
+        element: <ProductManagementPage></ProductManagementPage>
       },
       {
         path: "details/:id",
-        // element: <ProductDetailsPage></ProductDetailsPage>,
+        element: <ProductDetailsPage></ProductDetailsPage>,
       },
       {
         path: "cart",
-        // element: <CartPage></CartPage>
+        element: <CartPage></CartPage>
       },
       {
         path: "checkout",
-        // element: <CheckoutPage></CheckoutPage>,
+        element: <CheckoutPage></CheckoutPage>,
       },
       {
         path: "success",
-        // element: <SuccessPage></SuccessPage>,
+        element: <SuccessPage></SuccessPage>,
       },
       {
         path: "update/:id",
-        // element: <UpdateForm></UpdateForm>,
+        element: <UpdateForm></UpdateForm>,
       },
       {
         path: "create-product",
-        // element: <CreateProductForm></CreateProductForm>,
+        element: <CreateProductForm></CreateProductForm>,
       },
     ],
   },

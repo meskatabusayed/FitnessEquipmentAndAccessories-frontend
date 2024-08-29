@@ -1,20 +1,21 @@
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-// import { useAppDispatch } from "../../../redux/hooks";
-// import { selectCategory } from "../../../redux/features/category/categorySlice";
-// import { categoriesArr } from "../../../utils/categoriesArr";
+import { useAppDispatch } from "../../../redux/hooks";
+import { selectCategory } from "../../../redux/features/category/categorySlice";
+import { categoriesArr } from "../../../utils/categoriesArr";
 
 // import { getUniqueCategoriesByName } from "../../../utils/getUniqueCategories";
 
 const Categories = () => {
-//   const navigate = useNavigate();
-//   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 
-//   const handleCategoryClick = (category: string) => {
-//     navigate("/products"), dispatch(selectCategory(category));
-//   };
+  const handleCategoryClick = (category: string) => {
+    navigate("/products"), dispatch(selectCategory(category));
+  };
 
-  // const categories = products ? getUniqueCategoriesByName(products?.data) : [];
+  
+//   const categories = products ? getUniqueCategoriesByName(products?.data) : [];
 
   return (
     <div className="w-11/12 mx-auto lg:h-[500px]">
