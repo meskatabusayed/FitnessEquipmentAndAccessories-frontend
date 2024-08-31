@@ -1,11 +1,11 @@
 export const categoriesArr = [
     {
       name: "Gym Equipment",
-      image: "./src/assets/Gym Equipment.jpg",
+      image: "./src/assets/Gym-Equipment.jpg",
     },
     {
       name: "Cardio Equipment",
-      image: "./src/assets/Cardio Equipment.jpg",
+      image: "./src/assets/Cardio-Equipment.jpg",
     },
     {
       name: "Accessories",

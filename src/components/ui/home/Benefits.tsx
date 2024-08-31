@@ -3,25 +3,25 @@ const benefitsData = [
       title: "High Quality",
       description: "Our products are made with the highest quality materials.",
       image:
-        "./src/assets/high quality.avif",
+        "./src/assets/high-quality.avif",
     },
     {
       title: "Affordable Prices",
       description: "We offer competitive prices on all our products.",
       image:
-        "./src/assets/Affordable Prices.avif",
+        "./src/assets/Affordable-Prices.avif",
     },
     {
       title: "Fast Shipping",
       description: "Enjoy fast and reliable shipping on all orders.",
       image:
-        "./src/assets/Fast Shipping.jpg",
+        "./src/assets/Fast-Shipping.jpg",
     },
     {
       title: "Customer Support",
       description: "Our team is here to help you 24/7 with any inquiries.",
       image:
-        "./src/assets/Customer Support.avif",
+        "./src/assets/Customer-Support.avif",
     },
   ];
   
