@@ -81,7 +81,7 @@ const ProductsPage = () => {
           <ClearFilterButton></ClearFilterButton>
         </div>
         <h2 className="text-5xl text-center font-bold mb-10 russo-one-regular text-gray-700 mt-16">
-          FitFlex Essential Products
+          PH Fitness Products
         </h2>
         {selectedCategory && (
           <div className="mb-4 lg:pl-16">

@@ -11,7 +11,9 @@ const CreateProductForm = () => {
   const [createProduct] = useCreateProductMutation();
 
   const onSubmit = async (data: any) => {
+    try {
     const file = data.image[0];
+    console.log(file);
     const imageData = await handleImageUpload(file);
     const image = imageData?.display_url;
 
@@ -25,8 +27,14 @@ const CreateProductForm = () => {
       image: image,
     };
     await createProduct(product);
+    console.log(product);
     toast.success("Product created successfully");
     navigate("/products/management");
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
   };
   return (
     <>
@@ -73,11 +81,12 @@ const CreateProductForm = () => {
                     <span className="label-text">Category</span>
                   </label>
                   <select
+                    defaultValue="default"
                     {...register("category")}
                     className="select select-bordered w-full max-w-xs"
                     required
                   >
-                    <option disabled selected>
+                    <option disabled value="default">
                       Select Category
                     </option>
                     <option>Accessories</option>
