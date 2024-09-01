@@ -3,7 +3,7 @@ const Team = () => {
       <div className="mt-24 ">
         <div>
           <div className="flex justify-center text-center text-4xl mb-14">
-            <h1 className="font-semibold mb-10 italic">Honorable Team</h1>
+            <h1 className="font-semibold mb-10 italic">our Team</h1>
           </div>
           {/* <div className="w-9/12 mx-auto mb-10">
             <hr className="border-t-2 border-gray-300" />
