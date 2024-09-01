@@ -10,15 +10,15 @@ import "swiper/css/pagination";
 const testimonials = [
   {
     name: "John D. - New York, NY",
-    text: "FitFlex has completely transformed my fitness routine. The quality of their equipment is unmatched, and their customer service is exceptional. I highly recommend FitFlex to anyone serious about their fitness journey!",
+    text: "PH Fitness has completely transformed my fitness routine. The quality of their equipment is unmatched, and their customer service is exceptional. I highly recommend PH fitness to anyone serious about their fitness journey!",
   },
   {
     name: "Sarah L. - Los Angeles, CA",
-    text: "I've tried various fitness products over the years, but nothing compares to FitFlex. Their innovative designs and durable materials make every workout enjoyable and effective. Plus, their team is always there to help with any questions I have.",
+    text: "I've tried various fitness products over the years, but nothing compares to PH fitness. Their innovative designs and durable materials make every workout enjoyable and effective. Plus, their team is always there to help with any questions I have.",
   },
   {
     name: "Mark R. - Chicago, IL",
-    text: "FitFlex's products have helped me achieve my fitness goals faster than I ever thought possible. The attention to detail and commitment to quality are evident in every piece of equipment. Thank you, FitFlex, for making fitness fun and accessible!",
+    text: "PH fitness products have helped me achieve my fitness goals faster than I ever thought possible. The attention to detail and commitment to quality are evident in every piece of equipment. Thank you, PH fitness, for making fitness fun and accessible!",
   },
   {
     name: "Emily W. - Houston, TX",
@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     name: "Michael S. - Miami, FL",
-    text: "I was skeptical at first, but after using FitFlex's products, I'm a believer. Their equipment is top-notch, and their customer service is second to none. If you're looking to take your fitness to the next level, look no further than FitFlex.",
+    text: "I was skeptical at first, but after using PH fitness products, I'm a believer. Their equipment is top-notch, and their customer service is second to none. If you're looking to take your fitness to the next level, look no further than PH fitness.",
   },
 ];
 

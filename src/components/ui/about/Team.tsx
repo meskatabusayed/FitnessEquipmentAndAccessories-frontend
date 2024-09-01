@@ -13,12 +13,12 @@ const Team = () => {
               <span className="indicator-item badge badge-secondary h-12 p-5">
                 Mr. Micheal Brook
                 <br />
-                CEO of FitFlex Essentials
+                CEO of PH Fitness
               </span>
               <div className="h-32 w-9/12 mx-auto rounded-lg">
                 <img
                   alt="Tailwind CSS examples"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src="./src/assets/team1.jpg"
                 />
               </div>
             </div>
@@ -32,7 +32,7 @@ const Team = () => {
               <div className="h-32 w-32 rounded-lg">
                 <img
                   alt="Tailwind CSS examples"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src="./src/assets/team2.jpg"
                 />
               </div>
             </div>
@@ -46,7 +46,7 @@ const Team = () => {
               <div className="h-32 w-32 rounded-lg">
                 <img
                   alt="Tailwind CSS examples"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src="./src/assets/team3.jpg"
                 />
               </div>
             </div>
@@ -57,7 +57,7 @@ const Team = () => {
         </div>
         <div className="w-9/12 mx-auto mt-7">
           <h1 className="text-center text-slate-400">
-            At FitFlex, we pride ourselves on having a dynamic and dedicated team
+            At PH Fitness, we pride ourselves on having a dynamic and dedicated team
             committed to revolutionizing the fitness industry. Our leadership is
             driven by a shared vision of innovation, quality, and exceptional
             customer service. With a diverse range of expertise and a relentless
