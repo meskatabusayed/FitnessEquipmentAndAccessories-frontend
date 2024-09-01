@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { TCartInitialState } from "../../../types";
 import EmptyCard from "./EmptyCard";
+import { useEffect } from "react";
+
 
 type TCartCardProps = {
   cart: TCartInitialState;
@@ -15,6 +17,28 @@ const CartCard = ({
   handleRemoveFromCart,
   totalPrice,
 }: TCartCardProps) => {
+
+  useEffect(() => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      if (cart.items.length > 0) {
+        console.log('Triggering beforeunload');
+        event.preventDefault(); // Standard across browsers
+        event.returnValue = ''; // Required for most modern browsers to show a confirmation dialog
+        
+      }
+    };
+
+    // Add the event listener
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [cart.items]);
+
+
+
   return (
     <>
       <div className=" p-4 my-8 h-screen">
