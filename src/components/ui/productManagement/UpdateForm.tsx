@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { useGetSpecificProductQuery, useUpdateProductMutation } from "../../../redux/features/product/productApi";
+
 import handleImageUpload from "../../../utils/handleImageUpload";
 
 const UpdateForm = () => {
@@ -106,6 +107,7 @@ const UpdateForm = () => {
                   </label>
                   <input
                     type="file"
+                    
                     className="w-full px-3 py-2 border rounded"
                     {...register("image")}
                   />

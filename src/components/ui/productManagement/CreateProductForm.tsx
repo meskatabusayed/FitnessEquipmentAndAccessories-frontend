@@ -8,7 +8,7 @@ import handleImageUpload from "../../../utils/handleImageUpload";
 const CreateProductForm = () => {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const [createProduct] = useCreateProductMutation();
+  const [createProduct , isLoading ] = useCreateProductMutation(undefined);
 
   const onSubmit = async (data: any) => {
     try {
@@ -16,7 +16,7 @@ const CreateProductForm = () => {
     console.log(file);
     const imageData = await handleImageUpload(file);
     const image = imageData?.display_url;
-
+    console.log(image);
     const { name, price, category, description, stock } = data;
     const product = {
       name: name,
@@ -24,10 +24,13 @@ const CreateProductForm = () => {
       category: category,
       description: description,
       stock: stock,
-      image: image,
+      image: image ? image : "https://i.ibb.co/F0C3GxJ/Gym-Equipment4.webp",
     };
     await createProduct(product);
     console.log(product);
+    if(isLoading){
+        <h1 className="text-center">Loading...</h1>
+    }
     toast.success("Product created successfully");
     navigate("/products/management");
       
@@ -113,11 +116,19 @@ const CreateProductForm = () => {
                     type="file"
                     className="w-full px-3 py-2 border rounded"
                     {...register("image")}
-                    required
+                    
                   />
                 </div>
                 <div className="form-control mt-6 w-1/4">
-                  <button className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105">Create</button>
+                    
+                  <button 
+                  
+                  className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    
+                 
+                  Add
+                  </button>
+                  
                 </div>
               </form>
             </div>
