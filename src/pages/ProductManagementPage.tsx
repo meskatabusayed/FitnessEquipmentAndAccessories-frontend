@@ -3,7 +3,8 @@ import ErrorPage from "../components/ui/global/ErrorPage";
 import ProgressBar from "../components/ui/global/ProgressBar";
 import { useDeleteProductMutation, useGetProductsQuery } from "../redux/features/product/productApi";
 import { TProduct } from "../types";
-import { toast } from "sonner";
+// import { toast } from "sonner";
+import Swal from "sweetalert2";
 
 const ProductManagementPage = () => {
   const { data: products, isLoading, error } = useGetProductsQuery({});
@@ -16,8 +17,26 @@ const ProductManagementPage = () => {
   }
   //handle delete
   const handleDelete = (id: string) => {
-    deleteProduct(id);
-    toast.success("Product deleted successfully");
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteProduct(id);
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+      }
+    });
+    
+    // toast.success("Product deleted successfully");
   };
 
   return (

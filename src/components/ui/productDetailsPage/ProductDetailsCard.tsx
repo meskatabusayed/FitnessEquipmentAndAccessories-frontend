@@ -40,6 +40,7 @@ const ProductDetailsCard = ({
           <p className="text-xl mb-0">Price: ${product.price}</p>
           <p className="mb-0">Stock: {updatedStock}</p> {/* Use updatedStock here */}
           <p className="mb-0">Description: {product.description}</p>
+          <p className="mb-0">Category: {product.category}</p>
           <div className="card-actions justify-end">
             <button
               className={`btn inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105 ${

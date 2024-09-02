@@ -4,16 +4,18 @@ import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 import { useCreateProductMutation } from "../../../redux/features/product/productApi";
 import handleImageUpload from "../../../utils/handleImageUpload";
+import { useState } from "react";
 
 const CreateProductForm = () => {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const [createProduct , isLoading ] = useCreateProductMutation(undefined);
-
+  const [createProduct] = useCreateProductMutation();
+  const [loading , isLoading] = useState(false);
   const onSubmit = async (data: any) => {
     try {
     const file = data.image[0];
     console.log(file);
+    isLoading(true);
     const imageData = await handleImageUpload(file);
     const image = imageData?.display_url;
     console.log(image);
@@ -27,10 +29,9 @@ const CreateProductForm = () => {
       image: image ? image : "https://i.ibb.co/F0C3GxJ/Gym-Equipment4.webp",
     };
     await createProduct(product);
+    isLoading(false);
     console.log(product);
-    if(isLoading){
-        <h1 className="text-center">Loading...</h1>
-    }
+    
     toast.success("Product created successfully");
     navigate("/products/management");
       
@@ -123,10 +124,11 @@ const CreateProductForm = () => {
                     
                   <button 
                   
-                  className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                  className="animate-spin inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105">
                     
                  
-                  Add
+                  {loading ? 'loading' : 'Add'}
+
                   </button>
                   
                 </div>

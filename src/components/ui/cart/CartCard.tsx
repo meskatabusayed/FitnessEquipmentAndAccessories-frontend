@@ -31,7 +31,7 @@ const CartCard = ({
     // Add the event listener
     window.addEventListener('beforeunload', handleBeforeUnload);
 
-    // Clean up the event listener on unmount
+    //Clean up the event listener on unmount
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };

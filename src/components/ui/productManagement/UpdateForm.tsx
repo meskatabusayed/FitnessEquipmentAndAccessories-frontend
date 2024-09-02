@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { useGetSpecificProductQuery, useUpdateProductMutation } from "../../../redux/features/product/productApi";
 
 import handleImageUpload from "../../../utils/handleImageUpload";
+import { useState } from "react";
 
 const UpdateForm = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const UpdateForm = () => {
   const { data } = useGetSpecificProductQuery(id);
   //update product
   const [updateProduct] = useUpdateProductMutation();
-
+  const [loading , isLoading] = useState(false);
   const { register, handleSubmit } = useForm({
     values: data?.data,
     resetOptions: {
@@ -22,6 +23,7 @@ const UpdateForm = () => {
   });
   const onSubmit = async (data: any) => {
     const file = data.image[0];
+    isLoading(true);
     const imageData = await handleImageUpload(file);
     const image = imageData?.display_url;
 
@@ -35,6 +37,7 @@ const UpdateForm = () => {
       image: image ? image : null,
     };
     await updateProduct({ id, product });
+    isLoading(false);
     toast.success("Product updated successfully");
     navigate("/products/management");
   };
@@ -114,7 +117,8 @@ const UpdateForm = () => {
                 </div>
                 <div className="form-control mt-6 w-1/4">
                   <button className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105">
-                    Update
+                    
+                    {loading ? 'loading' : 'Update'}
                   </button>
                 </div>
               </form>
