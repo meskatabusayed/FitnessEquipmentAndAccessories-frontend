@@ -50,7 +50,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="flex items-center">
-          <img className="w-20 text-white" src="./src/assets/logo.png" alt="logo" />
+          <img className="w-20 text-white" src="https://i.ibb.co/F6KRhNt/logo.png" alt="logo" />
           <a className="ml-2 text-2xl font-bold text-gray-800">
             PH Fitness
           </a>
