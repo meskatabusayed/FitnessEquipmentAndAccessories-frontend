@@ -21,20 +21,22 @@ const UpdateForm = () => {
       keepDirtyValues: true, // keep dirty fields unchanged, but update defaultValues
     },
   });
+  const imageurl = data?.data?.image
+  
   const onSubmit = async (data: any) => {
     const file = data.image[0];
     isLoading(true);
     const imageData = await handleImageUpload(file);
     const image = imageData?.display_url;
 
-    const { name, price, category, description, stock } = data;
+    const { name, price, category, description, stock  } = data;
     const product = {
       name: name,
       price: price,
       category: category,
       description: description,
       stock: stock,
-      image: image ? image : null,
+      image: image ? image : imageurl,
     };
     await updateProduct({ id, product });
     isLoading(false);
@@ -118,7 +120,7 @@ const UpdateForm = () => {
                 <div className="form-control mt-6 w-1/4">
                   <button className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105">
                     
-                    {loading ? 'loading' : 'Update'}
+                    {loading ? 'loading...' : 'Update'}
                   </button>
                 </div>
               </form>

@@ -12,7 +12,7 @@ export const filterSlice = createSlice({
   initialState,
   reducers: {
     setSearchTerm: (state, action) => {
-      state.searchTerm = action.payload;
+     state.searchTerm = action.payload;
     },
     setCategory: (state, action) => {
       if (!state.categories.includes(action.payload)) {

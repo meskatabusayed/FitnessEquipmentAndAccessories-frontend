@@ -19,7 +19,7 @@ const ProductManagementPage = () => {
   const handleDelete = (id: string) => {
     Swal.fire({
       title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      text: "You want to delete it!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",

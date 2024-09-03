@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import CartCard from "../components/ui/cart/CartCard";
 import {
   removeFromCart,
@@ -18,12 +19,25 @@ const CartPage = () => {
     );
   };
   // handle remove from cart
-  const handleRemoveFromCart = (id: string) => {
-    if (
-      window.confirm("Are you sure you want to remove this item from the cart?")
-    ) {
-      dispatch(removeFromCart(id));
-    }
+  const handleRemoveFromCart = async (id: string) => {
+    await Swal.fire({
+      title: "Are you sure?",
+      text: "You want to delete it!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch(removeFromCart(id));
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your Product has been deleted.",
+          icon: "success",
+        });
+      }
+    });
   };
   //handle update quantity
   const handleUpdateQuantity = (id: string, quantity: number) => {
