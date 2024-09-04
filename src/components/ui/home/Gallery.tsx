@@ -1,3 +1,16 @@
+import gallery1 from "../../../assets/Happy-Clients1.jpg"
+import gallery2 from "../../../assets/Happy-Clients2.jpg"
+import gallery3 from "../../../assets/Happy-Clients3.jpg"
+import gallery4 from "../../../assets/Happy-Clients4.avif"
+import gallery5 from "../../../assets/Happy-Clients5.jpg"
+import gallery6 from "../../../assets/Happy-Clients6.jpg"
+import gallery7 from "../../../assets/Happy-Clients7.avif"
+import gallery8 from "../../../assets/Happy-Clients8.jpg"
+import gallery9 from "../../../assets/Happy-Clients9.jpg"
+import gallery10 from "../../../assets/Happy-Clients10.jpg"
+import gallery11 from "../../../assets/Happy-Clients11.jpg"
+
+
 const Gallery = () => {
     return (
       <div className="py-8">
@@ -9,44 +22,21 @@ const Gallery = () => {
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
-                src="./src/assets/Happy-Clients1.jpg"
+                src={gallery1}
+                alt=""
+              />
+            </div>
+             <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                 src={gallery2}
                 alt=""
               />
             </div>
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
-                 src="./src/assets/Happy-Clients2.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="./src/assets/Happy-Clients3.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="./src/assets/Happy-Clients4.avif"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-               src="./src/assets/Happy-Clients5.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-               src="./src/assets/Happy-Clients6.jpg"
+                src={gallery3}
                 alt=""
               />
             </div>
@@ -55,21 +45,21 @@ const Gallery = () => {
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
-                src="./src/assets/Happy-Clients7.avif"
+                src={gallery4}
                 alt=""
               />
             </div>
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
-              src="./src/assets/Happy-Clients8.jpg"
+               src={gallery5}
                 alt=""
               />
             </div>
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
-                src="./src/assets/Happy-Clients9.jpg"
+               src={gallery6}
                 alt=""
               />
             </div>
@@ -78,23 +68,46 @@ const Gallery = () => {
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
-                src="./src/assets/Happy-Clients10.jpg"
+                src={gallery7}
                 alt=""
               />
             </div>
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
-                src="./src/assets/Happy-Clients11.jpg"
+              src={gallery8}
                 alt=""
               />
             </div>
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
-               src="./src/assets/Happy-Clients3.jpg"
+                src={gallery9}
                 alt=""
               />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src={gallery10}
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src={gallery11}
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+               src={gallery3}
+                alt=""
+              /> 
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import why from "../../../assets/why.avif"
 const AboutUsIntro = () => {
     return (
       <div className=" flex justify-center px-3 ">
@@ -5,7 +6,7 @@ const AboutUsIntro = () => {
           <div className="">
             <div className="avatar flex justify-center">
               <div className="w-[144px] rounded-full">
-                <img src="./src/assets/why.avif" />
+                <img src={why} />
               </div>
             </div>
             <h1 className="text-2xl font-semibold text-center mt-2">Why PH Fitness?</h1>

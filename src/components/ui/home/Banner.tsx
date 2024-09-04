@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import BanerImage from "../../../assets/fitness-gym-accessories.jpg"
 const Banner = () => {
   const [isVisible, setIsVisible] = useState(false);
   //time set for effect
@@ -32,7 +32,7 @@ const Banner = () => {
               className={`w-full lg:w-10/12 h-auto bg-slate-100  object-cover rounded-lg  transition-transform duration-300  transform hover:scale-110 z-10  ${
                 isVisible ? "opacity-100 animate-pulse " : "opacity-0"
               }`}
-              src="./src/assets/fitness-gym-accessories.jpg" 
+              src={BanerImage} 
               alt="PH Gym Equipment"
             />
           </div>

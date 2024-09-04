@@ -1,3 +1,6 @@
+import team1 from "../../../assets/team1.jpg"
+import team2 from "../../../assets/team2.jpg"
+import team3 from "../../../assets/team3.jpg"
 const Team = () => {
     return (
       <div className="mt-24 ">
@@ -18,7 +21,7 @@ const Team = () => {
               <div className="h-32 w-9/12 mx-auto rounded-lg">
                 <img
                   alt="Tailwind CSS examples"
-                  src="./src/assets/team1.jpg"
+                  src={team1}
                 />
               </div>
             </div>
@@ -32,7 +35,7 @@ const Team = () => {
               <div className="h-32 w-32 rounded-lg">
                 <img
                   alt="Tailwind CSS examples"
-                  src="./src/assets/team2.jpg"
+                  src={team2}
                 />
               </div>
             </div>
@@ -46,7 +49,7 @@ const Team = () => {
               <div className="h-32 w-32 rounded-lg">
                 <img
                   alt="Tailwind CSS examples"
-                  src="./src/assets/team3.jpg"
+                  src={team3}
                 />
               </div>
             </div>

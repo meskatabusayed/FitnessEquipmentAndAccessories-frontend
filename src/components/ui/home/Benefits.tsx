@@ -1,27 +1,31 @@
+import benefitImage1 from "../../../assets/high-quality.avif"
+import benefitImage2 from "../../../assets/Affordable-Prices.avif"
+import benefitImage3 from "../../../assets/Fast-Shipping.jpg"
+import benefitImage4 from "../../../assets/Customer-Support.avif"
 const benefitsData = [
     {
       title: "High Quality",
       description: "Our products are made with the highest quality materials.",
       image:
-        "./src/assets/high-quality.avif",
+      benefitImage1,
     },
     {
       title: "Affordable Prices",
       description: "We offer competitive prices on all our products.",
       image:
-        "./src/assets/Affordable-Prices.avif",
+      benefitImage2,
     },
     {
       title: "Fast Shipping",
       description: "Enjoy fast and reliable shipping on all orders.",
       image:
-        "./src/assets/Fast-Shipping.jpg",
+      benefitImage3,
     },
     {
       title: "Customer Support",
       description: "Our team is here to help you 24/7 with any inquiries.",
       image:
-        "./src/assets/Customer-Support.avif",
+      benefitImage4,
     },
   ];
   
